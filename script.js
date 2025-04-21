@@ -1,14 +1,14 @@
-let signup = document.querySelector(".signup");
-let login = document.querySelector(".login");
-let slider = document.querySelector(".slider");
-let formSection = document.querySelector(".form-section");
+const loginBtn = document.getElementById("loginBtn");
+const signupBtn = document.getElementById("signupBtn");
+const slider = document.getElementById("slider");
+const formBox = document.querySelector(".form-box");
 
-signup.addEventListener("click", () => {
-    slider.classList.add("moveslider");
-    formSection.classList.add("form-section-move");
+loginBtn.addEventListener("click", () => {
+  slider.style.left = "0";
+  formBox.style.transform = "translateX(0%)";
 });
 
-login.addEventListener("click", () => {
-    slider.classList.remove("moveslider");
-    formSection.classList.remove("form-section-move");
+signupBtn.addEventListener("click", () => {
+  slider.style.left = "50%";
+  formBox.style.transform = "translateX(-50%)";
 });
